@@ -1,0 +1,23 @@
+require 'readline'
+require_relative 'reader'
+require_relative 'printer'
+
+def READ(arg)
+  Reader.read_str(arg)
+end
+
+def EVAL(arg)
+  arg
+end
+
+def PRINT(arg)
+  Printer.pr_str(arg)
+end
+
+def rep(arg)
+  PRINT(EVAL(READ(arg)))
+end
+
+while line = Readline.readline("user> ", true) do
+  puts rep(line)
+end

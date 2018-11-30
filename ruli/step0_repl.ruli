@@ -1,0 +1,21 @@
+require 'readline'
+
+def READ(arg)
+  arg
+end
+
+def EVAL(arg)
+  arg
+end
+
+def PRINT(arg)
+  arg
+end
+
+def rep(arg)
+  PRINT(EVAL(READ(arg)))
+end
+
+while line = Readline.readline("user> ", true) do
+  puts rep(line)
+end
